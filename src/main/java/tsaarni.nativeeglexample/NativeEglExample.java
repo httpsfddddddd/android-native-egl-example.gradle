@@ -81,7 +81,7 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     
     
     
-    @ReportsCrashes(
+    @ReportsCrashes (
     httpMethod = Method.PUT,
     reportType = Type.JSON,
     formUri = "http://54.149.181.74:5984/acra-myapp/_design/acra-storage/_update/report",
