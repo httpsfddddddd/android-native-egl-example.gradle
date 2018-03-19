@@ -27,10 +27,10 @@ import android.view.View.OnClickListener;
 import android.util.Log;
 import android.app.Application;
 
-import org.acra.ACRA;
-import org.acra.annotation.*;
-import org.acra.annotation.ReportsCrashes.*;
-import org.acra.sender.HttpSender;
+//import org.acra.ACRA;
+//import org.acra.annotation.*;
+//import org.acra.annotation.ReportsCrashes.*;
+//import org.acra.sender.HttpSender;
 
 
 
