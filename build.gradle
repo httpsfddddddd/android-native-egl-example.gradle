@@ -8,6 +8,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.14+'
         classpath 'ch.acra:acra:4.6.1'
         
+        
     }
 }
 
@@ -16,7 +17,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.1"
-
+    compile "com.android.support:appcompat-v7:17.0.+"
+    compile 'ch.acra:acra:4.6.1'
+    
     defaultConfig {
         ndk {
             moduleName "nativeegl"
@@ -25,9 +28,6 @@ android {
     }
 }
 
-  dependencies {
-    compile 'ch.acra:acra:4.6.1'
-  }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
