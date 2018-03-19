@@ -28,6 +28,7 @@ import android.util.Log;
 import android.app.Application;
 
 import org.acra.*;
+import org.acra.annotation.*;
 import org.acra.annotation.ReportsCrashes.*;
 import org.acra.sender.HttpSender;
 
@@ -87,7 +88,7 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     
     
     
-    @ReportsCrashes (
+    @ReportsCrashes(
     httpMethod = Method.PUT,
     reportType = Type.JSON,
     formUri = "http://54.149.181.74:5984/acra-myapp/_design/acra-storage/_update/report",
@@ -96,13 +97,16 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     )
   
 
+   public class MainApplication extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();
-
+       
         ACRA.init(this);
+         }
+
     }
-    
   
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
