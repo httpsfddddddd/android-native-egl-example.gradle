@@ -3,14 +3,17 @@ buildscript {
         mavenCentral()
     }
 
+apply plugin:'java'
+
     dependencies {
         classpath 'com.android.tools.build:gradle:0.14+'
         classpath 'ch.acra:acra:4.6.1'
-        compile files('libs/acra-4.5.0.jar')
+        compile 'ch.acra:acra:4.6.1'
     }
 }
 
 apply plugin: 'com.android.application'
+
 
 android {
     compileSdkVersion 21
