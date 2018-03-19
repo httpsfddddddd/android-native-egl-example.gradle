@@ -17,8 +17,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.1"
-    compile "com.android.support:appcompat-v7:17.0.+"
-    compile 'ch.acra:acra:4.6.1'
+    
     
     defaultConfig {
         ndk {
@@ -26,6 +25,11 @@ android {
             ldLibs "log", "android", "EGL", "GLESv1_CM"
         }
     }
+}
+ 
+ dependencies {
+    compile "com.android.support:appcompat-v7:17.0.+"
+    compile 'ch.acra:acra:4.6.1'
 }
 
 
