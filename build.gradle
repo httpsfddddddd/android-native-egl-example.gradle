@@ -6,7 +6,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:0.14+'
-        compile 'ch.acra:acra:4.6.1'
+        classpath 'ch.acra:acra:4.6.1'
     }
 }
 
