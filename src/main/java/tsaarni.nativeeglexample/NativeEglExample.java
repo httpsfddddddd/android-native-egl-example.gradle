@@ -89,21 +89,15 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     formUriBasicAuthPassword = "12345"
     )
   
-  public class MainApplication extends Application {
 
-     @Override
-     public void onCreate() {
-         super.onCreate();
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-         ACRA.init(this);
-     }
-
-  }
+        ACRA.init(this);
+    }
     
-    
-    
-    
-    
+  
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
         nativeSetSurface(holder.getSurface());
