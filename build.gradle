@@ -4,6 +4,8 @@ buildscript {
     }
 
 apply plugin:'java'
+apply plugin: 'com.android.application'
+
 
     dependencies {
         classpath 'com.android.tools.build:gradle:0.14+'
@@ -12,7 +14,6 @@ apply plugin:'java'
     }
 }
 
-apply plugin: 'com.android.application'
 
 
 android {
