@@ -4,8 +4,36 @@ buildscript {
     }
 
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.14+'
+  dependencies {
+     classpath 'com.android.tools.build:gradle:0.14+'
+     compile fileTree(include: ['*.jar'], dir: 'libs')
+    //support library
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile "com.android.support:design:$supportLibraryVersion"
+    compile "com.android.support:support-v4:$supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$okHttpVersion"
+    compile "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    compile "com.squareup.picasso:picasso:$picassoVersion"
+    compile "com.jakewharton.picasso:picasso2-okhttp3-downloader:$okHttp3DownloaderVersion"
+    //firebase
+    compile "com.google.firebase:firebase-core:$firebaseVersion"
+    compile "com.google.firebase:firebase-auth:$firebaseVersion"
+    compile "com.google.firebase:firebase-database:$firebaseVersion"
+    compile "com.google.firebase:firebase-crash:$firebaseVersion"
+    //firebase ui
+    compile "com.firebaseui:firebase-ui-auth:$firebaseUiVersion"
+    compile "com.firebaseui:firebase-ui-database:$firebaseUiVersion"
+    compile "com.google.android.gms:play-services-vision:$playServicesVersion"
+    compile "me.dm7.barcodescanner:zbar:$barcodeScannerVersion"
+    compile "com.segunfamisa:icicle:$icicleVersion"
+    apt "com.segunfamisa:icicle-processor:$icicleVersion"
+    testCompile "junit:junit:$junitVersion"
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'org.ocpsoft.prettytime:prettytime:4.0.0.Final'
         compile 'ch.acra:acra:4.6.1'        
     }
 }
