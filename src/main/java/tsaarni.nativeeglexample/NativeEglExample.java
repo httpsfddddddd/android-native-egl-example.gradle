@@ -94,11 +94,11 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     
     
     @ReportsCrashes(
-    httpMethod = Method.PUT,
+     httpMethod = Method.PUT,
     reportType = Type.JSON,
-    formUri = "http://54.149.181.74:5984/acra-myapp/_design/acra-storage/_update/report",
-    formUriBasicAuthLogin = "testuser",
-    formUriBasicAuthPassword = "12345"
+    formUri = "http://54.202.119.12:5984/acra-myapp/_design/acra-storage/_update/report",
+    formUriBasicAuthLogin = "docker",
+    formUriBasicAuthPassword = "123456"
     )
   
 
