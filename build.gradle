@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        mavenCentral()
+        mavenCentral(url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases')
     }
 
 
