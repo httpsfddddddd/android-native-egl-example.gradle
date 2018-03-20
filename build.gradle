@@ -6,15 +6,11 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:0.14+'
-        classpath 'ch.acra:acra:4.6.1'
-        
-        
+        compile 'ch.acra:acra:4.6.1'        
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 21
@@ -30,15 +26,6 @@ android {
       
 }
  
- dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    compile group: 'ch.acra', name: 'acra', version: '4.6.1'
-
-}
-
-
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
