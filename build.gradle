@@ -27,7 +27,10 @@ android {
     }
     
     dependencies {
-    compile 'ch.acra:acra:4.6.1'
+    com.android.support:appcompat-v7:27.1.0
+
+   compile group: 'ch.acra', name: 'acra', version: '4.6.1'
+
 }
     
     
