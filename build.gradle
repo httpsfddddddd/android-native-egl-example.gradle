@@ -27,7 +27,6 @@ android {
     }
     
     dependencies {
-    compile "com.android.support:appcompat-v7:17.0.+"
     compile 'ch.acra:acra:4.6.1'
 }
     
