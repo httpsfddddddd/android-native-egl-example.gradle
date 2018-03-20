@@ -29,7 +29,7 @@ android {
 }
  
  dependencies {
-    compile 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
    compile group: 'ch.acra', name: 'acra', version: '4.6.1'
 
 }
