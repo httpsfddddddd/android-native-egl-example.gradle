@@ -25,19 +25,14 @@ android {
             ldLibs "log", "android", "EGL", "GLESv1_CM"
         }
     }
-    
-    dependencies {
+      
+}
+ 
+ dependencies {
     compile 'com.android.support:appcompat-v7:27.1.0'
-
    compile group: 'ch.acra', name: 'acra', version: '4.6.1'
 
 }
-    
-    
-    
-}
- 
- 
 
 
 task wrapper(type: Wrapper) {
