@@ -104,11 +104,15 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
 
    public class MainApplication extends Application {
 
-    @Override
+     @Override
     public void onCreate() {
-        super.onCreate();
-       
+        // The following line triggers the initialization of ACRA
         ACRA.init(this);
+        mReportsCrashes = this.getClass().getAnnotation(ReportsCrashes.class);
+        JsonSender jsonSender = new JsonSender(mReportsCrashes.formUri(), null);
+        ErrorReporter.getInstance().setReportSender(jsonSender);
+
+        super.onCreate();
          }
 
     }
