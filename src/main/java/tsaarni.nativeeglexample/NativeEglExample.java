@@ -26,10 +26,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
 
-import android.app.Application;
-import org.acra.ACRA;
-import org.acra.annotation.ReportsCrashes;
-import org.acra.sender.HttpSender;
+//import android.app.Application;
+//import org.acra.ACRA;
+///import org.acra.annotation.ReportsCrashes;
+///import org.acra.sender.HttpSender;
 
 
 //import org.acra.ACRA;
@@ -93,29 +93,29 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     
     
     
-    @ReportsCrashes(
-     httpMethod = Method.PUT,
-    reportType = Type.JSON,
-    formUri = "http://54.202.119.12:5984/acra-myapp/_design/acra-storage/_update/report",
-    formUriBasicAuthLogin = "docker",
-    formUriBasicAuthPassword = "123456"
-    )
+   // @ReportsCrashes(
+   //  httpMethod = Method.PUT,
+   // reportType = Type.JSON,
+   // formUri = "http://54.202.119.12:5984/acra-myapp/_design/acra-storage/_update/report",
+   // formUriBasicAuthLogin = "docker",
+  //  formUriBasicAuthPassword = "123456"
+  //  )
   
 
-   public class MainApplication extends Application {
+ //  public class MainApplication extends Application {
 
-     @Override
-    public void onCreate() {
+  //   @Override
+    //public void onCreate() {
         // The following line triggers the initialization of ACRA
-        ACRA.init(this);
-        mReportsCrashes = this.getClass().getAnnotation(ReportsCrashes.class);
-        JsonSender jsonSender = new JsonSender(mReportsCrashes.formUri(), null);
-        ErrorReporter.getInstance().setReportSender(jsonSender);
+     //   ACRA.init(this);
+        //mReportsCrashes = this.getClass().getAnnotation(ReportsCrashes.class);
+     //   JsonSender jsonSender = new JsonSender(mReportsCrashes.formUri(), null);
+     //   ErrorReporter.getInstance().setReportSender(jsonSender);
 
-        super.onCreate();
-         }
+      //  super.onCreate();
+     //    }
 
-    }
+   // }
   
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
