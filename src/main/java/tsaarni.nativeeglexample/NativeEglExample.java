@@ -26,6 +26,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.util.Log;
 
+
+import com.hypertrack.hyperlog.HyperLog;
+import com.hypertrack.hyperlog.HLCallback;
+import com.hypertrack.hyperlog.HyperLog;
+import com.hypertrack.hyperlog.error.HLErrorResponse;
+package com.hypertrack.hyperlog_demo;
+import com.hypertrack.hyperlog.LogFormat;
+
 //import android.app.Application;
 //import org.acra.ACRA;
 ///import org.acra.annotation.ReportsCrashes;
