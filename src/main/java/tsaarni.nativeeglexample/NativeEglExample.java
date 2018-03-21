@@ -139,5 +139,20 @@ public class NativeEglExample extends Activity implements SurfaceHolder.Callback
     static {
         System.loadLibrary("nativeegl");
     }
+          HyperLog.initialize(this);
+          HyperLog.setLogLevel(Log.VERBOSE);
+          HyperLog.d(TAG,"Debug Log");
+          HyperLog.setURL("API URL");
+          HyperLog.pushLogs(this, false, new HLCallback() {
+            @Override
+            public void onSuccess(@NonNull Object response) {
+
+            }
+
+            @Override
+            public void onError(@NonNull VolleyError errorResponse) {
+
+            }
+});
 
 }
